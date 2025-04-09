@@ -1,0 +1,98 @@
+.app {
+    height: 100vh;
+    padding: 0px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.weather {
+    width: 100%;
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.weather-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.weather-table th,
+.weather-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+.weather-table th {
+    background-color: #007BFF;
+    color: white;
+}
+
+.weather-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.weather-table tr:hover {
+    background-color: #ddd;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button a {
+    color: white;
+    text-decoration: none;
+}
+
+.weather-table td, .weather-table th {
+    padding: 12px;
+    text-align: center;
+}
+
+.weather-table td button {
+    margin: 0 5px;
+    padding: 6px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+}
+
+button.update {
+    background-color: #28a745;
+    color: white;
+}
+
+button.delete {
+    background-color: #dc3545;
+    color: white;
+}
+
+button.add-new {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+}
+
+button.add-new a,
+button.update a {
+    color: white;
+    text-decoration: none;
+}
