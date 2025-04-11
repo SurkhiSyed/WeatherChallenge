@@ -48,7 +48,7 @@ npm start
 
 ## .env configuration
 ```
-OPENWEATHER_API_KEY=your_openweathermap_api_key
+REACT_APP_WEATHER_API_KEY=your_openweathermap_api_key
 DB_HOST=localhost
 DB_USER=root
 DB_PASSWORD=your_password
