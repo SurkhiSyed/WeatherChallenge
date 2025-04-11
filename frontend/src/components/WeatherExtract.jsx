@@ -13,6 +13,8 @@ const WeatherExtract = () => {
     const [showDbResults, setShowDbResults] = useState(false);
 
     const searchLocation = async (event) => {
+        const apiKey = process.env.REACT_APP_WEATHER_API_KEY;
+
         if (event.key === 'Enter') {
             setError('');
             setData({});
@@ -20,7 +22,7 @@ const WeatherExtract = () => {
             setDbResults([]);
             try {
                 const geoRes = await axios.get(
-                    `https://api.openweathermap.org/geo/1.0/direct?q=${location}&limit=1&appid=2feba834e933de1786b2f6fbef1bbabf`
+                    `https://api.openweathermap.org/geo/1.0/direct?q=${location}&limit=1&appid=${apiKey}`
                 );
 
                 if (geoRes.data.length === 0) {
@@ -31,7 +33,7 @@ const WeatherExtract = () => {
                 const { lat, lon, name } = geoRes.data[0];
 
                 const weatherRes = await axios.get(
-                    `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=2feba834e933de1786b2f6fbef1bbabf`
+                    `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`
                 );
 
                 setData(weatherRes.data);
